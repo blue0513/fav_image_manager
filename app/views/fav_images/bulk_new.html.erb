@@ -1,0 +1,10 @@
+<section>
+  <div class="container">
+    <%= form_with model: @fav_image, url: "/fav_images/bulk_create" do |form| %>
+    <p>
+      <%= form.file_field :files, multiple: true, class: "form-control" %><br>
+    </p>
+    <%= form.submit "Bulk Upload", class: "btn btn-primary my-2"%>
+    <% end %>
+  </div>
+</section>

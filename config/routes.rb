@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   delete "fav_images/delete/:id" => "fav_images#destroy"
   get "fav_images/edit/:id" => "fav_images#edit"
   patch "fav_images/edit/:id" => "fav_images#update"
+
+  # bulk
+  get  "fav_images/bulk_new"
+  post "fav_images/bulk_create"
 end
