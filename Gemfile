@@ -52,6 +52,7 @@ gem 'bootstrap', '~> 5.2.0'
 gem 'jquery-rails'
 
 gem 'image_processing', '~> 1.2'
+gem 'activestorage-validator'
 
 group :development, :test do
 end
