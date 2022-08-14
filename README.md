@@ -1,24 +1,18 @@
-# README
+# FavImageManager
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![image](screenshots/image.png)
 
-Things you may want to cover:
+Manage your favorite images easily.
 
-* Ruby version
+## Requirements
 
-* System dependencies
+- ruby: 3.0.x
+- bundler: 2.2.x
 
-* Configuration
+## Quick Start
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```console
+$ bundle install
+$ bundle exec rails:db:migrate
+$ bundle exec rails server
+```
