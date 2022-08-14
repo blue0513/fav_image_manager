@@ -1,6 +1,6 @@
 <section>
     <div class="container">
-        <%= form_with model: @fav_image, url: fav_images_new_path, local: true do |form| %>
+        <%= form_with model: @fav_image, url: "/fav_images/create" do |form| %>
             <p>
                 <%= form.file_field :file, class: "form-control" %><br>
                 <%= form.text_field :name, class: "form-label", placeholder: "name" %><br>

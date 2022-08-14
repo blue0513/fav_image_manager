@@ -12,7 +12,7 @@ class FavImagesController < ApplicationController
   end
 
   def index
-    @fav_image = FavImage.new
+    @fav_images = FavImage.all
   end
 
   private
