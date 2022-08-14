@@ -51,6 +51,8 @@ gem "bootsnap", require: false
 gem 'bootstrap', '~> 5.2.0'
 gem 'jquery-rails'
 
+gem 'image_processing', '~> 1.2'
+
 group :development, :test do
 end
 

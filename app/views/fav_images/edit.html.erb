@@ -1,0 +1,22 @@
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <%= image_tag @fav_image.file, class: "card-img-top" %>
+          <div class="card-body">
+            <p class="card-text">
+              <%= @fav_image.name %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <%= form_with model: @fav_image, url: "/fav_images/edit/#{@fav_image.id}", method: :patch do |form| %>
+          <%= form.text_field :name, class: "form-label", placeholder: "name" %><br>
+          <%= form.submit "Update", class: "btn btn-primary my-2"%>
+      <% end %>
+    </div>
+  </div>
+</div>

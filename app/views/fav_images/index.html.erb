@@ -6,17 +6,25 @@
 
       <div class="col-md-4">
         <div class="card mb-4 box-shadow">
-          <%= image_tag "/sample.jpg", class: "card-img-top" %>
+          <%= image_tag fav_image.file, class: "card-img-top" %>
           <div class="card-body">
             <p class="card-text">
               <%= fav_image.name %>
             </p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  <%= button_to "Edit",
+                   "fav_images/edit/#{fav_image.id}",
+                   {method: :get,
+                    id: fav_image.id,
+                    class: "btn btn-sm btn-outline-secondary"}
+                  %>
                   <%= button_to "Delete",
                    "fav_images/delete/#{fav_image.id}",
-                   {method: :delete, id: fav_image.id}
+                   {method: :delete,
+                    id: fav_image.id,
+                    form: {data: {turbo_confirm: "Are you sure?"}},
+                    class: "btn btn-sm btn-outline-danger"}
                   %>
               </div>
             </div>

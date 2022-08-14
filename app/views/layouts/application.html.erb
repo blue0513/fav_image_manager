@@ -15,9 +15,7 @@
     <header>
       <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <strong>Album</strong>
-          </a>
+          <%= link_to "FavImageManager", root_path, {class: "navbar-brand d-flex align-items-center"} %>
         </div>
       </div>
     </header>
@@ -26,10 +24,9 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Album example</h1>
-          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+          <h1 class="jumbotron-heading">Fav Images</h1>
+          <p class="lead text-muted">Your favorite images are here!</p>
           <p>
-              <%= link_to("Back to Top", root_path, {class: "btn btn-primary my-2"}) %>
               <%= link_to("Upload FavImage", fav_images_new_path, {class: "btn btn-primary my-2"}) %>
           </p>
         </div>
