@@ -34,10 +34,11 @@ class FavImagesController < ApplicationController
     @fav_image = FavImage.new
   end
 
+  # FIXME: too slow
   def bulk_create
     files = fav_image_bulk_params[:files].reject {|i| i.blank? }
     files.each do |file|
-      FavImage.create!(file: file)
+      FavImage.create(file: file)
     end
     redirect_to root_path
   end
